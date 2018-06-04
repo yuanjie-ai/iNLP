@@ -9,15 +9,14 @@
 
 
 ## Usage
-### 1. 中文转换
-- 繁体转简体
+### 1. 中文繁简单体转换
 ```python
 from inlp.convert import chinese
 
 chinese.s2t('忧郁的台湾乌龟') # chinese.simple2tradition('忧郁的台湾乌龟')
 chinese.t2s('憂郁的臺灣烏龜') # chinese.tradition2simple('憂郁的臺灣烏龜')
 ```
-- 简体转繁体
+### 2. 全角半角字符转换
 ```python
 from inlp.convert import char
 
