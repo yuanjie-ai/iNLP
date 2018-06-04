@@ -11,7 +11,7 @@ def __map(path):
         for i in f:
             _ = i.strip().split('\t')
             if _[0] not in dic:
-                dic.setdefault(_[0], []).append(_[1:])
+                dic.setdefault(_[0], []).append(_[1])
         return dic
 
 
