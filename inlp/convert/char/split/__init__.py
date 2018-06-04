@@ -13,5 +13,5 @@ def __map(path):
         return dic
 
 
-simple_split = __map('./chaizi-jt.txt')
-tradition_split = __map('./chaizi-ft.txt')
+simple = __map('./chaizi/chaizi-jt.txt')
+tradition = __map('./chaizi/chaizi-ft.txt')
