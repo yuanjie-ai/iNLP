@@ -28,5 +28,3 @@ char.full2half(punctuations)
 numbers = "0123456789"
 char.half2full(numbers)
 ```
-
-### 2. 简体转繁体
