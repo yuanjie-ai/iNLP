@@ -4,7 +4,7 @@
 
 
 ## Install
-- `pip install iNLP` or `pip install git+https://github.com/Jie-Yuan/iNLP.git`
+- `pip install iNLP` **or** `pip install git+https://github.com/Jie-Yuan/iNLP.git`
 ---
 
 
