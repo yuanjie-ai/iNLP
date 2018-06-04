@@ -22,9 +22,9 @@ chinese.t2s('憂郁的臺灣烏龜') # chinese.tradition2simple('憂郁的臺灣
 ```python
 from inlp.convert import char
 
-punctuations = r"[ ．﹑︰〈〉─《﹖﹣﹂﹁﹔！？｡。＂＃＄％＆＇（）＊＋，﹐－／：；＜＝＞＠［＼］＾＿｀｛｜｝～｟｠｢｣､、〃》「」『』【】〔〕〖〗〘〙〚〛〜〝〞〟〰〾〿–—‘’‛“”„‟…‧﹏.．!\"#$%&\'()*+,\-.\:;<=>?@\[\]\\\/^_`{|}~]+"
-char.full2half(punctuations)
-
 numbers = "0123456789"
 char.half2full(numbers)
+
+numbers = "０１２３４５６７８９"
+char.full2half(punctuations)
 ```
