@@ -11,7 +11,7 @@ setup(
     url='https://github.com/Jie-Yuan/iNLP',
     keywords=["iNLP", "313303303@qq.com"],
     
-    description=('Spark human utils'),
+    description=('NLP human utils'),
     packages=find_packages(),
     long_description=long_description,
     long_description_content_type="text/markdown",
