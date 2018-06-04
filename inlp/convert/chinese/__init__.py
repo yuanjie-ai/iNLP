@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from langconv import Converter
+from .langconv import Converter
 
 
 class Chinese(object):
