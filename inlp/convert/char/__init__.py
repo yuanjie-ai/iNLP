@@ -4,14 +4,14 @@ FULL2HALF[0x3000] = 0x20
 HALF2FULL = {j: i for i, j in FULL2HALF.items()}
 
 
-def halfen(s):
+def full2half(s):
     '''
     Convert full-width characters to ASCII counterpart
     '''
     return str(s).translate(FULL2HALF)
 
 
-def fullen(s):
+def half2full(s):
     '''
     Convert all ASCII characters to the full-width counterpart.
     '''
