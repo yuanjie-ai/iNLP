@@ -25,7 +25,9 @@ char.half2full("0123456789")
 char.full2half("０１２３４５６７８９")
 ```
 
-### 3. 繁简体汉字拆字
+### 3. 繁简体汉字拆解
+
+- 拆成字
 ```python
 from inlp.convert.char import split
 
@@ -44,4 +46,8 @@ from inlp.convert.char import split
  ['户 一 ㇆ 火'],
  ['刀 □ 丨 乚 彐 彐 囗 乂']]
 '''
+```
+
+- 拆成笔画
+```python
 ```
