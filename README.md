@@ -52,9 +52,21 @@ from inlp.convert.char import split
 ```python
 ```
 
+
+### 4. 相似度
+- 基于词库的相似度
+```python
+from inlp.thesaurus import similarity_cilin, similarity_hownet
+s1 = ['周杰伦', '是', '一个', '歌手']
+s2 = ['刘若英', '是', '个', '演员']
+
+# 基于词林的相似度
+similarity_cilin(s1, s2)
+# 基于知网的相似度
+similarity_hownet(s1, s2)
+```
 ---
 > 计划
-### 4. HowNet + Cilin
 
 ### 相似词
 ### 相似句
