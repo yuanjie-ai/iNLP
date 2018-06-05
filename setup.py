@@ -10,7 +10,7 @@ setup(
     version='1.0.0',
     url='https://github.com/Jie-Yuan/iNLP',
     keywords=["iNLP", "313303303@qq.com"],
-    
+
     description=('NLP human utils'),
     packages=find_packages(),
     long_description=long_description,
@@ -34,5 +34,8 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Topic :: Software Development :: Libraries'
+    ],
+    install_requires=[
+        'simhash',
     ]
 )
