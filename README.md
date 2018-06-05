@@ -56,21 +56,30 @@ from inlp.convert.char import split
 ### 4. 相似度
 - 基于词库的相似度
 ```python
-from inlp.similarity.thesaurus import cilin, hownet
+from inlp.similarity import thesaurus
 
 s1 = ['周杰伦', '是', '一个', '歌手']
 s2 = ['刘若英', '是', '个', '演员']
 
 # 基于词林的相似度
-cilin(s1, s2)
+thesaurus.cilin(s1, s2)
 """
 0.65
 """
 
 # 基于知网的相似度
-hownet(s1, s2)
+thesaurus.hownet(s1, s2)
 """
 0.5714285714285714
+"""
+```
+- 基于`hash`的相似度
+```python
+from inlp.similarity import simhash
+
+simhash(s1, s2)
+"""
+0.59375
 """
 ```
 ---
