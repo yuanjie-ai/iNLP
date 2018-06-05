@@ -226,12 +226,12 @@ class SimHownet:
         return similarity
 
 
-__s = Similarity()
-similarity_cilin = similarity_cilin_w = __s.ci_lin.sim2018
-similarity_hownet = similarity_hownet_w = __s.how_net.calc
-similarity = Similarity().ensmble
+# __s = Similarity()
+# similarity_cilin = similarity_cilin_w = __s.ci_lin.sim2018
+# similarity_hownet = similarity_hownet_w = __s.how_net.calc
+# similarity = Similarity().ensmble
 
 __ss = SimCilin()
 __sss = SimHownet()
-similarity_cilin_s = __ss.distance
-similarity_hownet_s = __sss.distance
+similarity_cilin = __ss.distance
+similarity_hownet = __sss.distance
