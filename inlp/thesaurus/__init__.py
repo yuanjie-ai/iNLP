@@ -109,7 +109,7 @@ class SimCilin(object):
 
     def load_semantic(self):
         sem_dict = {}
-        for line in open(self.cilin_path):
+        for line in open(self.cilin_path, encoding='gbk'):
             line = line.strip().split(' ')
             sem_type = line[0]
             words = line[1:]
@@ -180,7 +180,7 @@ class SimHownet:
 
     def load_semanticwords(self):
         semantic_dict = {}
-        for line in open(self.semantic_path):
+        for line in open(self.semantic_path, encoding='gbk'):
             words = [word for word in line.strip().replace(' ', '>').replace('\t', '>').split('>') if word != '']
             word = words[0]
             word_def = words[2]
