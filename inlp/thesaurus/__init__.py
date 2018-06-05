@@ -9,8 +9,8 @@ __mtime__ = '2018/6/5'
 混合采用词林和知网的相似度计算方法。得到更加符合人们感觉的相似度数值
 '''
 
-from cilin.V3.ciLin import CilinSimilarity
-from hownet.howNet import How_Similarity
+from .cilin.V3.ciLin import CilinSimilarity
+from .hownet.howNet import How_Similarity
 
 
 class Similarity(object):
