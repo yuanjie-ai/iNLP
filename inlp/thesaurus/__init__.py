@@ -4,7 +4,6 @@ __title__ = 'main'
 __author__ = 'JieYuan'
 __mtime__ = '2018/6/5'
 """
-import codecs
 import os
 
 from .cilin.V3.ciLin import CilinSimilarity
@@ -110,7 +109,7 @@ class SimCilin(object):
 
     def load_semantic(self):
         sem_dict = {}
-        for line in codecs.open(self.cilin_path):
+        for line in open(self.cilin_path):
             line = line.strip().split(' ')
             sem_type = line[0]
             words = line[1:]
