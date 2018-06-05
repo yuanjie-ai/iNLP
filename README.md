@@ -51,3 +51,5 @@ from inlp.convert.char import split
 - 拆成笔画
 ```python
 ```
+
+### 4. HowNet + Cilin
