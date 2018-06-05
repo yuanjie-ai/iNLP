@@ -52,4 +52,9 @@ from inlp.convert.char import split
 ```python
 ```
 
+---
+> 计划
 ### 4. HowNet + Cilin
+
+### 相似词
+### 相似句
