@@ -8,8 +8,8 @@ from ..utils import _get_module_path
 
 class Chars(object):
     def __init__(self):
-        self.__simple = self.__map(_get_module_path('./chaizi/chaizi-jt.txt', __file__))
-        self.__tradition = self.__map(_get_module_path('./chaizi/chaizi-ft.txt', __file__))
+        self.__simple = self.__map(_get_module_path('./chars/chaizi-jt.txt', __file__))
+        self.__tradition = self.__map(_get_module_path('./chars/chaizi-ft.txt', __file__))
 
     def get_chars(self, char):
         assert isinstance(char, str) and len(char) == 1
