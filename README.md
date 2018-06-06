@@ -9,7 +9,7 @@
 
 
 ## Usage
-### **convert**
+### **`convert`**
 ```python
 from inlp.convert import chinese
 
