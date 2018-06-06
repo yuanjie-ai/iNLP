@@ -1,13 +1,4 @@
-# @Author : bamtercelboo
-# @Datetime : 2018/3/28 8:24
-# @File : handian.py
-# @Last Modify Time : 2018/3/28 8:24
-# @Contact : bamtercelboo@{gmail.com, 163.com}
-
-"""
-    FILE :  handian.py
-    FUNCTION : the simulation of handian action
-"""
+# -*- coding: utf-8 -*-
 
 import requests
 import time

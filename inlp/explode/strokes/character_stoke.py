@@ -7,45 +7,20 @@ from bs4 import BeautifulSoup
 
 
 class Stoke(object):
-    # dictionary_filepath = "./default_stoke.txt"
-    dictionary_filepath = "./Stoke/default_stoke.txt"
     hanzi5_url = "http://www.hanzi5.com/bishun/%s.html"
 
-    def __init__(self):
-        self.dictionary = {}
-        self.read_dictionary()
-
-    def read_dictionary(self):
-        self.dictionary = {}
-        with open(self.dictionary_filepath, encoding="UTF-8") as f:
-            for line in f:
-                line = line.strip("\n")
-                line = line.split(" ")
-                self.dictionary[line[0]] = line[1:]
-        f.close()
-        # print(self.dictionary)
-
     def get_stoke(self, word):
-        if word in self.dictionary:
-            return self.dictionary[word]
-        else:
-            print("From hanzi5:    word {}".format(word), end=" ")
-            word = hex((ord(word)))[2:]
-            word = urllib.parse.quote(word)
-            return self.get_stoke_from_hanzi5(word)
+        print("Explode {}".format(word))
+        word = hex((ord(word)))[2:]
+        word = urllib.parse.quote(word)
+        return self.get_stoke_from_hanzi5(word)
 
     def get_stoke_from_hanzi5(self, word):
         url = self.hanzi5_url % word
-        # print("url", url)
         html = self.post_baidu(url)
-        # print(html)
         if html is None:
             return None
-        char_stoke = self.anlysis_stoke_from_html(html)
-        if char_stoke is not None:
-            self.dictionary[word] = char_stoke
-        # print("char_stoke {}".format(char_stoke))
-        return char_stoke
+        return self.anlysis_stoke_from_html(html)
 
     def anlysis_stoke_from_html(self, html_doc):
         soup = BeautifulSoup(html_doc, 'html.parser')
@@ -77,9 +52,7 @@ class Stoke(object):
 
 
 if __name__ == "__main__":
-    print("extract character stoke from [http://www.hanzi5.com/bishun/]")
+    print("extract character stoke from http://www.hanzi5.com/bishun/")
 
     stoke = Stoke()
-    print("中", stoke.get_stoke("中"))
-    print("王", stoke.get_stoke("王"))
-    print("像", stoke.get_stoke("像"))
+    print(stoke.get_stoke("袁"))
