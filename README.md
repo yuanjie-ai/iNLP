@@ -9,7 +9,7 @@
 
 
 ## Usage
-### 1. 中文繁简体转换
+### **convert**
 ```python
 from inlp.convert import chinese
 
