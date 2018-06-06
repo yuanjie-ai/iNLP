@@ -23,16 +23,15 @@ class Chars(object):
             return chars
         else:
             print('请输入单个汉字')
-
-
-def __map(self, path):
-    dic = defaultdict(list)
-    with open(path) as f:
-        for i in f:
-            _ = i.strip().split('\t')
-            if _[0] not in dic:
-                dic.setdefault(_[0], []).append(_[1])
-        return dic
+            
+    def __map(self, path):
+        dic = defaultdict(list)
+        with open(path) as f:
+            for i in f:
+                _ = i.strip().split('\t')
+                if _[0] not in dic:
+                    dic.setdefault(_[0], []).append(_[1])
+            return dic
 
 
 class Strokes(object):
