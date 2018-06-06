@@ -1,32 +1,17 @@
-# @Author : bamtercelboo
-# @Datetime : 2018/3/27 9:50
-# @File : stoke.py
-# @Last Modify Time : 2018/3/27 9:50
-# @Contact : bamtercelboo@{gmail.com, 163.com}
-
-"""
-    FILE :  stoke.py
-    FUNCTION : None
-    EXAMPLE:
-        Source:
-        中
-        TO:
-        中: 丨フ一丨
-"""
-
-# from handian import Handian
-from Stoke.handian import Handian
-import urllib.request as urllib2
+# -*- coding: utf-8 -*-
 import urllib
+import urllib.request as urllib2
+
 from bs4 import BeautifulSoup
+
+from .handian import Handian
+
+from ...utils import _get_module_path
 
 
 class Stoke(object):
     # dictionary_filepath = "./default_stoke.txt"
-    dictionary_filepath = "./Stoke/default_stoke.txt"
-    # baiduhanyu_url = 'http://hanyu.baidu.com/zici/s?ptype=zici&wd=%s'
-    # hanzi5_url = "http://www.hanzi5.com/bishun/%s.html"
-    # hanzi5_url = "http://www.zdic.net/z/?/js/%s.htm"
+    dictionary_filepath = _get_module_path("./default_stoke.txt", __file__)
     handian_url = None
 
     def __init__(self):
@@ -85,8 +70,9 @@ class Stoke(object):
             timeout = 10
             # request = urllib2.Request(url)
             request = urllib2.Request(url)
-            request.add_header('User-agent', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36')
-            request.add_header('connection','keep-alive')
+            request.add_header('User-agent',
+                               'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36')
+            request.add_header('connection', 'keep-alive')
             request.add_header('referer', url)
             response = urllib2.urlopen(request, timeout=timeout)
             html = response.read()
@@ -105,8 +91,3 @@ if __name__ == "__main__":
     print("王", stoke.get_stoke("王"))
     print("吋", stoke.get_stoke("吋"))
     print("緉", stoke.get_stoke("緉"))
-
-
-
-
-

@@ -73,7 +73,7 @@ class Handian(object):
         requests.adapters.DEFAULT_RETRIES = 50
         s = requests.session()
         s.keep_alive = False
-        time.sleep(0.3)
+        time.sleep(2)
         response = requests.post("http://www.zdic.net/sousuo/", data=self.params,
                                  headers=self.headers, cookies=self.cookies)
 

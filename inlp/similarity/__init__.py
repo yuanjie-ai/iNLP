@@ -48,5 +48,6 @@ class SimHaming:
         code_s2 = self.get_code(s2)
         similarity = (100 - self.haming_distance(code_s1, code_s2) * 100 / 64) / 100
         return similarity
-    
-simhash= SimHaming().distance
+
+
+simhash = SimHaming().distance

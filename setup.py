@@ -7,7 +7,7 @@ with open("README.md") as f:
 
 setup(
     name='iNLP',
-    version='1.0.0',
+    version='0.0.1',
     url='https://github.com/Jie-Yuan/iNLP',
     keywords=["iNLP", "313303303@qq.com"],
 
