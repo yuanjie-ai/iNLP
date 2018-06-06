@@ -21,6 +21,7 @@ setup(
     maintainer_email='313303303@qq.com',
     license='MIT',
     include_package_data=True,
+    package_data={'':['*.*']},
     platforms=["all"],
     python_requires='>=2.7, <4',
     classifiers=[
