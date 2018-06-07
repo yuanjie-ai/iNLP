@@ -7,7 +7,7 @@ __mtime__ = '2018/6/5'
 import os
 
 
-_get_module_path = lambda path, file: os.path.normpath(os.path.join(os.getcwd(), os.path.dirname(f), path))
+_get_module_path = lambda path, file: os.path.normpath(os.path.join(os.getcwd(), os.path.dirname(file), path))
 
 
 _cilin_path = _get_module_path('../data/cilin2.txt', __file__)
