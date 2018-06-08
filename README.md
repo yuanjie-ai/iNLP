@@ -4,7 +4,9 @@
 
 
 ## Install
-- `pip install iNLP`
+```sh
+pip install iNLP
+```
 ---
 
 
