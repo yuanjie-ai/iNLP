@@ -6,6 +6,7 @@
 ## Install
 ```sh
 pip install iNLP
+pip install git+https://github.com/Jie-Yuan/iNLP.git
 ```
 ---
 
