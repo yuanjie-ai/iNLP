@@ -21,8 +21,8 @@ class KerasEmbedding(object):
         embedding_matrix = np.zeros((num_words, self.embeddings_dim))
         # embedding_matrix = np.random.random((num_words, EMBEDDING_DIM))  # np.random.normal(size=(num_words, EMBEDDING_DIM))
         for word, idx in self.word_index.items():
-            embedding_vector = self.embeddings_index.get(word)
-            if embedding_vector is not None:
+            if word in self.embeddings_index:
+                embedding_vector = self.embeddings_index[word]
                 # words not found in embedding index will be all-zeros.
                 embedding_matrix[idx] = embedding_vector
 
