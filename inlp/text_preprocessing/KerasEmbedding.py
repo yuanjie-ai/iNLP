@@ -24,6 +24,7 @@ class KerasEmbedding(object):
             if word in self.embeddings_index:
                 # words not found in embedding index will be all-zeros.
                 embedding_matrix[idx] = self.embeddings_index[word]
+        self.embedding_matrix = embedding_matrix
         # note that we set trainable = False so as to keep the embeddings fixed
         embedding_layer = Embedding(input_dim=num_words,
                                     output_dim=self.embeddings_dim,
