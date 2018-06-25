@@ -21,10 +21,10 @@ class KerasBow(object):
         """
         :param corpus: ['some thing to do', 'some thing to drink']与sklearn提取文本特征一致
         """
-        print('Create Bag of Words ...')
+        print('Create Bag Of Words ...')
         self.tokenizer = Tokenizer(self.num_words)
         self.tokenizer.fit_on_texts(docs)
-        print(f"Get Unique Words In Train: {len(self.tokenizer.word_index)}")
+        print(f"Get Unique Words In Corpus: {len(self.tokenizer.word_index)}")
         # self.tokenizer.word_index
         # self.tokenizer.word_counts
 
