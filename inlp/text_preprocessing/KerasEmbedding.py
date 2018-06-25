@@ -12,7 +12,7 @@ class KerasEmbedding(object):
         self.fname = fname
         self.maxlen = maxlen
         self.word_index = word_index
-        self.embeddings_index, self.embeddings_dim = self.gensim_load_wv()  # self.file_load_wv
+        self.embeddings_index, self.embeddings_dim = self.file_load_wv()
 
     def get_keras_embedding(self, train_embeddings=False):
         print('Get Keras Embedding Layer ...')
@@ -32,14 +32,15 @@ class KerasEmbedding(object):
                                     trainable=train_embeddings)
         return embedding_layer
 
-    def gensim_load_wv(self):
-        try:
-            import gensim
-            print('Load Word Vectors ...')
-            model = gensim.models.KeyedVectors.load_word2vec_format(self.fname)
-            return model, model.vector_size
-        except ImportError:
-            raise ImportError("Please install gensim")
+    # def gensim_load_wv(self):
+    #     """大写会变成小写"""
+    #     try:
+    #         import gensim
+    #         print('Load Word Vectors ...')
+    #         model = gensim.models.KeyedVectors.load_word2vec_format(self.fname)
+    #         return model, model.vector_size
+    #     except ImportError:
+    #         raise ImportError("Please install gensim")
 
     def file_load_wv(self):
         print('Load Word Vectors ...')
