@@ -22,10 +22,8 @@ class KerasEmbedding(object):
         # embedding_matrix = np.random.random((num_words, EMBEDDING_DIM))  # np.random.normal(size=(num_words, EMBEDDING_DIM))
         for word, idx in self.word_index.items():
             if word in self.embeddings_index:
-                embedding_vector = self.embeddings_index[word]
                 # words not found in embedding index will be all-zeros.
-                embedding_matrix[idx] = embedding_vector
-
+                embedding_matrix[idx] = self.embeddings_index[word]
         # note that we set trainable = False so as to keep the embeddings fixed
         embedding_layer = Embedding(input_dim=num_words,
                                     output_dim=self.embeddings_dim,
