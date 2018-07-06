@@ -15,3 +15,6 @@ _hownet_path = _get_module_path('../data/hownet.dat', __file__)
 _simple_path = _get_module_path('../data/chaizi-jt.txt', __file__)
 _tradition_path = _get_module_path('../data/chaizi-ft.txt', __file__)
 _stroke_path = _get_module_path('../data/strokes.json', __file__)
+
+######################
+from .ngrams import Ngrams
