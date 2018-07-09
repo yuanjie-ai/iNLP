@@ -18,4 +18,4 @@ _stroke_path = _get_module_path('../data/strokes.json', __file__)
 
 ######################
 from .ngrams import Ngrams
-import .pipe
+from .pipe import *
