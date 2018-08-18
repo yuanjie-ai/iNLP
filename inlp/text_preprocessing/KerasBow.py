@@ -24,7 +24,7 @@ class KerasBow(object):
         print('Create Bag Of Words ...')
         self.tokenizer = Tokenizer(self.num_words, lower=False) # 不改变大小写（需提前预处理）
         self.tokenizer.fit_on_texts(docs)
-        print(f"Get Unique Words In Corpus: {len(self.tokenizer.word_index)}")
+        print("Get Unique Words In Corpus: %s" % len(self.tokenizer.word_index))
         # self.tokenizer.word_index
         # self.tokenizer.word_counts
 
