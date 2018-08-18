@@ -16,6 +16,7 @@ class KerasBow(object):
         """
         self.maxlen = maxlen
         self.num_words = num_words
+        self.tokenizer = None
 
     def fit(self, docs):
         """
