@@ -26,13 +26,14 @@ class KerasBow(object):
         self.tokenizer = Tokenizer(self.num_words, lower=False) # 不改变大小写（需提前预处理）
         self.tokenizer.fit_on_texts(docs)
         print("Get Unique Words In Corpus: %s" % len(self.tokenizer.word_index))
+        return self
         # self.tokenizer.word_index
         # self.tokenizer.word_counts
 
     def transform(self, docs):
         print('Docs To Sequences ...')
         sequences = self.tokenizer.texts_to_sequences(docs)
-        pad_docs = pad_sequences(sequences, maxlen=self.maxlen, padding='post')
+        pad_docs = pad_sequences(sequences, self.maxlen, padding='post')
         if self.maxlen is None:
             self.maxlen = pad_docs.shape[1]
         return pad_docs
