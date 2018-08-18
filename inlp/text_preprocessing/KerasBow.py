@@ -27,8 +27,6 @@ class KerasBow(object):
         self.tokenizer.fit_on_texts(docs)
         print("Get Unique Words In Corpus: %s" % len(self.tokenizer.word_index))
         return self
-        # self.tokenizer.word_index
-        # self.tokenizer.word_counts
 
     def transform(self, docs):
         print('Docs To Sequences ...')
